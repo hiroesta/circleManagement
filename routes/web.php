@@ -91,3 +91,4 @@ Route::get('/home','HomeController@index');
 Route::get('/home/{id}','HomeController@show');
 //ログイン後のホームページ画面
 
+//test
