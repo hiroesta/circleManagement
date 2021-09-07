@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
 {
+    /*
     public function index()
     {
         $posts = Post::with(['user'])->latest()->get();
@@ -58,5 +59,7 @@ class PostController extends Controller
         $reply->save();
 
         return redirect()->back();
-    }
+    }*/
+
+    public function 
 }

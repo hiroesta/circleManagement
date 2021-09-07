@@ -12,6 +12,7 @@ use App\Http\Requests\User\UpdateRequest;
 
 class UserController extends Controller
 {
+    /*
     public function show($id)
     {
         $user = User::find($id);
@@ -32,5 +33,26 @@ class UserController extends Controller
         $user->save();
 
         return redirect()->back()->with(['message' => '更新しました！']);
+    }
+    */
+
+    public function create(){
+
+    }
+
+    public function confirm(){
+
+    }
+
+    public function profile(){
+
+    }
+
+    public function show(){
+
+    }
+
+    public function edit(){
+
     }
 }
