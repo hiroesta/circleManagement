@@ -37,22 +37,31 @@ class UserController extends Controller
     */
 
     public function create(){
-
+        return view('users.create');
     }
 
     public function confirm(){
-
+        return view('users.confirm');
     }
 
-    public function profile(){
-
+    public function profile($id){
+        $user = User::find($id);
+        return view('users.profile', ['user' => $user]);
     }
 
-    public function show(){
-
+    public function show($id){
+        $user = User::find($id);
+        return view('users.show', ['user' => $user]);
     }
 
-    public function edit(){
+    public function edit(UpdateRequest $request){
+        $user = Auth::user();
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->introduction=$request->introduction;
+        $user->save();
 
+
+        return redirect()->back()->with(['message' => '更新しました！']);
     }
 }
